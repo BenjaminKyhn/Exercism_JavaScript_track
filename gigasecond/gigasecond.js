@@ -7,4 +7,8 @@ export const gigasecond = (date) => {
   return new Date(date.getTime() + gigasecondInMiliseconds);
 };
 
+export function gigasecond(date) {
+  return new Date(date.getTime() + gigasecondInMiliseconds);
+}
+
 const gigasecondInMiliseconds = 10 ** 9 * 1000;
