@@ -17,19 +17,10 @@ export class HighScores {
   }
 
   get personalBest() {
-    this.highscores.sort((a,b) => b-a);
-    return this.highscores[0];
+    return Math.max(...this.highscores);
   }
 
   get personalTopThree() {
-    this.highscores.sort((a,b) => b-a);
-    let personal = [];
-
-    for (let i = 0; i < this.highscores.length; i++) {
-      if (i < 3)
-        personal.push(this.highscores[i])
-    }
-
-    return personal;
+    return this.highscores.sort((a,b) => b-a).slice(0, 3);
   }
 }
