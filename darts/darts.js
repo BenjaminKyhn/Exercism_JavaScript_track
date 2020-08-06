@@ -4,7 +4,7 @@
 //
 
 export const score = (x, y) => {
-    let distance = Math.pow(x ** 2 + y ** 2, 0.5);
+    let distance = Math.sqrt(x ** 2 + y ** 2);
 
     if (distance > 10)
         return 0;
